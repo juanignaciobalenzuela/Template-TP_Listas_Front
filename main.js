@@ -15,3 +15,26 @@ fetch('./data/comidas.json')          // Ruta al archivo JSON
 let comidas = [];
 
 const container = document.getElementById('comidaContainer');
+
+
+
+mostrarComidaConforeach()
+
+const agregarComidaform = document.getElementById("agregarComidaForm")
+
+agregarComidaform.addEventListener("submit", (event) => (
+
+alert("Comida agregada" +  event.target.nombre.value)
+
+))
+
+let nuevacomida = {
+  nombre: event.target.nombre.value
+  categoria:event.target.categoria.value
+  provincia: event.target.provincia.value
+  ingredientes: event.target.ingredientes.value
+}
+
+comidas.push(nuevacomida)
+mostrarComidaConforeach()
+
