@@ -19,7 +19,23 @@ let comidas = [];
 
 const container = document.getElementById('comidaContainer');
 
+function agregar() {
+  container.innerHTML = ""
+  comidas.forEach( comida => {
+   container.innerHTML +=
+   `
+   <article class="card">
+   <h2>${comida.nombre}</h2>
+   <p>${comida.provincia}</p>
+   <span class="categoria">${comida.categoria}</span>
+   <ul class="ingredientes">${comida.ingredientes}</ul>
+   </article>
+   `
+  } )
 
+}
+
+agregar()
 
 mostrarComidaConforeach()
 
@@ -31,7 +47,9 @@ alert("Comida agregada" +  event.target.nombre.value)
 
 ))
 
-
+const agregarComida = document.getElementById("agregarComida")
+agregarComida.addEventListener("submit", (event) =>{
+  event.preventDefault()
 
 let nuevacomida = {
   nombre: event.target.nombre.value,
@@ -41,7 +59,10 @@ categoria:event.target.categoria.value,
 }
 
 comidas.push(nuevacomida)
+agregar()
+console.log(nuevacomida)
 mostrarComidaConforeach()
+})
 
 const buscador = document.getElementById("buscador")
 const filtroCategoria = document.getElementById("filtroCategoria")

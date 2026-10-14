@@ -8,6 +8,7 @@
 </head>
 <body>
     <header class="filtros">
+      <input type=" search" id="buscador" placeholder="busca por nombre,provincia y categoria">
       <!-- Para filtros y navegacion -->
     <select id="filtroCategoria">
       <option value="">Todas las categorias</option>
@@ -36,10 +37,27 @@
     </main>     
 
   
-    <section class="addFood">
-      <!-- Para el form para agregar comida -->
+<section class="addFood">
+<form id="agregarComida">
+<h2> Agregar</h2>
+<label for="nombredecomida">Nombre</label>
+<input type="text" id="nombre" name="nombre" required>
+<label for="categoriacomida">Categoria</label>
+<input type="text" id="categoria" name="categoria" required>
+<label for="provinciacomida">Provincia</label>
+<input type="text" id="provincia" name="provincia" required>
+  
+  
+  
+  
+<button type="submit">Send</button>
+</form>
+       
+  </section>
+  
+  <!-- Para el form para agregar comida -->
     </section>
 
-    <script type="module" src="./main.js"></script>
+ <script type="module" src="./main.js"></script>
 </body>
 </html>
