@@ -89,3 +89,25 @@ mostrarComidas(comidasFiltradas)
 filtroCategoria.addEventListener ("change", filtrar)
 filtroProvincia.addEventListener ("change", filtrar)
 buscador.addEventListener("input", buscar)
+
+
+const agregarIngredientes = document.getElementById("agregarIngredientes")
+const ingredientesContainer = document.querySelector("contenedor-ingredientes")
+
+ingredientesContainer.innerHTML +  <input type="text" class="ingrediente" placeholder="Un ingrediente por dos" required></input>
+
+
+
+let categoria = []
+
+comida.forEach(comida =>  {
+
+categoria.push(comida.categoria)
+
+})
+
+categoria.forEach(categoria => {
+
+filtroCategoria.innerHTML += '<option value>"$(categoria)" $(categoria)</option>'
+
+})
