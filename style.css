@@ -2,70 +2,150 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0px;
+    
+}
+body{
+  background-color: #d3d3d3;
+  display: flex;
+  flex-direction:column;
+
+  justify-content: center;
 }
 
 .comida-container {
-  
-    width: 100%;
-    height: 200vh;
-    display: flex;
-    flex-wrap: wrap;
-    background-color: rgb(223, 222, 222);
-    gap:2rem
-    }
-    article{
-    margin: 3rem;
-    background-color: white;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 20rem;
-    height: 10rem;
-    border-radius: 25px;
-    border: solid, black, 0.3rem;
-    font-family: "Nunito Sans", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: weight;
-    font-style: normal;
-    font-variation-settings:
-    "wdth" 100,
-    "YTLC" 500;
-    
-    
-    }
-    button{
-    width: 6rem;
-    height: 3vh;
-    background-color: white;
-    border: solid, black, 0.1rem;
-    font-family: "Nunito Sans", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: weight;
-    font-style: normal;
-    font-variation-settings:
-    "wdth" 100,
-    "YTLC" 500;
-    }
-    .addFood{
-    display: flex;
-    justify-content: center;
-    
-    
-    }
-    .agregarComida{
-    display: flex;
-    flex-direction: column;
-    width: 20rem;
-    font-family: "Nunito Sans", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: weight;
-    font-style: normal;
-    font-variation-settings:
-    "wdth" 100,
-    "YTLC" 500;
-    
-    
-    
-    
-    }
-    
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  padding: 1rem;
+}
+.card{
+  background-color: #e4e4e4;
+  border-radius: 0.5rem;
+  width: 22%;
+  height: 11.5rem;
+  border: 0.15rem,solid,#c7c2c2;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  padding-left: 1rem;
+}
+.card:hover{
+  background-color: #dbdada;
+}
+
+.categoría{
+  font-size: 0.8rem;
+}
+h2{
+  font-size: 1.5rem;
+  width: 100%;
+}
+p{ 
+  font-size: 1.5rem ;
+}
+ul{
+  height: auto;
+  list-style : none;
+  font-size: medium;
+}
+li{
+  height: fit-content;
+  width: fit-content;
+  background-color: #d6d6d6;
+  display: flex;
+  flex-wrap: wrap;
+  border-radius: 0.1rem;
+  border: none;
+  margin: 0.3rem;
+}
+.addFood{
+  width: 95%;
+  height: 40vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;  
+  margin: 1rem;
+}
+
+form{
+  width: 30%;
+  height: 100%;
+display: flex;
+justify-content: center;
+flex-direction: column;
+border: 0.15rem,solid, #c7c2c2;
+border-radius: 0.5rem;
+background-color: #e4e4e4;
+padding: 1.5rem;
+font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+form:hover{
+  background-color: #dbdada;
+}
+
+button{
+  margin: auto;
+  margin-top: 1rem;
+  width: 40%;
+}
+
+.categoría{
+  color: #990000;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.filtros{
+  height: 10vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+.filtros input{
+  appearance: none;
+  -webkit-appearance: none;
+  width: 60%;
+  height: 6vh;
+  border: none;
+  border-radius: 20px;
+}
+
+.filtros input::placeholder{
+  color: #a0a0a0;
+}
+
+.filtros select{
+  appearance: none;
+  width: 10%;
+  height: 6vh;
+  border:none;
+  display: flex;
+  justify-content: center;
+  align-items: center ;
+  padding: 0.3rem;
+  color: #a0a0a0;
+  border-radius: 0.3rem;
+  outline: none;
+}
+
+#Buscar{
+  appearance: none;
+  -webkit-appearance: none;
+  line-height: 1;
+  padding-left: 1.5rem;
+  outline: none;
+}
+
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-results-button,
+input[type="search"]::-webkit-search-results-decoration {
+  -webkit-appearance: none;
+  appearance: none;
+  display: none;
+}

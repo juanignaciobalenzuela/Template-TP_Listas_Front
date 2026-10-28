@@ -8,56 +8,42 @@
 </head>
 <body>
     <header class="filtros">
-      <input type=" search" id="buscador" placeholder="busca por nombre,provincia y categoria">
       <!-- Para filtros y navegacion -->
-    <select id="filtroCategoria">
-      <option value="">Todas las categorias</option>
-      <option value="Parrilla">Parrilla</option>
-      <option value="Horno">Horno</option>
-      <option value="Frito">Frito</option>
-    </select>
+       <input type="search"  id="Buscar" placeholder="Filtrar Por Provincia, Categoría o Comida">
+       <select id="filtrocategoria">
 
+
+
+       </select>
+       <select id="filtroprovincia">
+       </select>
     
-    <select id="filtroProvincia">
-      <option value="">Todas las provincias</option>
-      <option value="Buenos Aires">Buenos Aires</option>
-      <option value="Cordoba">Cordoba</option>
-      <option value="Entre rios">Entre rios</option>
-      <option value="Jujuy">Jujuy</option>
-      <option value="Salta">Salta</option>
-      <option value="Santa fe">Santa fe</option>
-      <option value="Tucuman">Tucuman</option>
-    </select>
-
-
     </header>
 
     <main class="comida-container" id="comidaContainer">
-        <!-- Contenido Dinamico -->
+
     </main>     
 
-  
-<section class="addFood">
-<form id="agregarComida">
-<h2> Agregar</h2>
-<label for="nombredecomida">Nombre</label>
-<input type="text" id="nombre" name="nombre" required>
-<label for="categoriacomida">Categoria</label>
-<input type="text" id="categoria" name="categoria" required>
-<label for="provinciacomida">Provincia</label>
-<input type="text" id="provincia" name="provincia" required>
-  
-  
-  
-  
-<button type="submit">Send</button>
-</form>
-       
-  </section>
-  
-  <!-- Para el form para agregar comida -->
+    <section class="addFood">
+      <!-- Para el form para agregar comida -->
+       <form id="agregarcomida">
+        <label for="nombre">Nombre de la comida</label>
+        <input type="text" id="nombre" placeholder="Nombre de la Comida">
+        
+        <label for="categoria">Categoría</label>
+        <input type="text" id="categoria" placeholder="Categoría">
+
+        <label for="provincia">Provincia</label>
+        <input type="text" id="provincia" placeholder="Provincia">
+        <label for="ingredientes">Ingredientes</label>
+        <div class="contenedorIngredientes">
+        <input type="text" id="ingredientes"class="ingrediente" placeholder="Ingredientes">
+        </div>
+        <button type="button" id="agregarIngredientes">Agregar Ingredientes</button>
+        <button type="submit">Agregar la comida</button>
+       </form>
     </section>
 
- <script type="module" src="./main.js"></script>
+    <script type="module" src="main.js"></script>
 </body>
 </html>
